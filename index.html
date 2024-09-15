@@ -39,7 +39,7 @@
       </div>
 
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="#" id="home-link">Home</a></li> <!-- Added Home link with ID -->
         <li><a href="#">About</a></li>
         <li><a href="#" id="cv-link">CV</a></li> <!-- Added ID for CV link -->
         <li><a href="#">Research</a></li>
@@ -77,6 +77,14 @@
         top: document.getElementById('cv').offsetTop, // Scroll to CV section
         behavior: 'smooth'
       });
+    });
+
+    // JavaScript to navigate to homepage
+    document.getElementById('home-link').addEventListener('click', function() {
+      // Hide CV section if it's visible
+      document.querySelector('.cv-container').style.display = 'none';
+      document.querySelector('.content').style.display = 'block'; // Show content
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
     });
   </script>
 </body>
