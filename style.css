@@ -31,18 +31,23 @@ nav{
 span{
   color: #f9004d;
 }
-nav ul li{
+nav ul li {
   display: inline-block;
   list-style: none;
-  margin: 10px 15px;
+  margin: 10px 20px; /* Increase the margin for more spacing */
 }
-nav ul li a{
+
+nav ul li a {
   text-decoration: none;
+  font-size: 24px; /* Increase the font size */
+  padding: 10px; /* Add some padding around the text */
   transition: 0.5s;
 }
-nav ul li a:hover{
-  color: #f9004d;
+
+nav ul li a:hover {
+  color: #f9004d; /* Maintain the hover effect */
 }
+
 
 .content{
   margin-top: 10%;
