@@ -27,10 +27,10 @@
           flex-grow: 1; /* Allow container to grow */
           padding: 20px; /* Add some padding */
       }
-      .cv-container, .publications-container {
+      .cv-container, .publications-container, .research-container {
           display: none; /* Initially hidden */
           width: 100%; /* Full width */
-          max-width: 800px; /* Max width for the CV container */
+          max-width: 800px; /* Max width for the containers */
           margin: 20px 0; /* Margin above and below */
       }
       .cv-container {
@@ -69,20 +69,30 @@
       .social-links a {
           margin: 0 10px; /* Space between icons */
       }
+      .research-item {
+          margin-bottom: 40px; /* Space between research items */
+      }
+      .research-item img {
+          width: 100%; /* Make image responsive */
+          height: auto; /* Maintain aspect ratio */
+      }
+      .research-item h3 {
+          margin-top: 10px; /* Space above title */
+      }
   </style>
 </head>
 <body>
   <div class="container">
     <nav>
       <div class="logo">
-        <a href="#">Onur Çatmabacak<span></span></a> 
+        <a href="#home" id="logo-link">Onur Çatmabacak<span></span></a> 
       </div>
 
       <ul>
         <li><a href="#home" id="home-link">Home</a></li> <!-- Added Home link with ID -->
         <li><a href="#cv" id="cv-link">CV</a></li> <!-- Added ID for CV link -->
         <li><a href="#publications" id="publications-link">Publications</a></li> <!-- Added ID for Publications link -->
-        <li><a href="#research">Research</a></li>
+        <li><a href="#research" id="research-link">Research</a></li> <!-- Added ID for Research link -->
       </ul>
     </nav>
     
@@ -106,6 +116,21 @@
       <p>You can view my publications directly at the following link:</p>
       <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22catmabacak%2C%20onur%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank" class="button">View Publications</a>
     </div>
+
+    <!-- Research Section -->
+    <div class="research-container" id="research"> <!-- ID for linking -->
+      <h2>My Research</h2>
+      <div class="research-item">
+        <img src="https://via.placeholder.com/800x400" alt="Research Image 1"> <!-- Placeholder Image -->
+        <h3>Research Topic 1</h3>
+        <p>This is a brief description of the first research topic. It covers the main points and findings of the study.</p>
+      </div>
+      <div class="research-item">
+        <img src="https://via.placeholder.com/800x400" alt="Research Image 2"> <!-- Placeholder Image -->
+        <h3>Research Topic 2</h3>
+        <p>This is a brief description of the second research topic. It highlights the significance and implications of the research.</p>
+      </div>
+    </div>
   </div>
 
   <!-- Social Links at the Bottom -->
@@ -127,6 +152,7 @@
       document.querySelector('.content').style.display = 'none';
       document.querySelector('.cv-container').style.display = 'none';
       document.querySelector('.publications-container').style.display = 'none';
+      document.querySelector('.research-container').style.display = 'none'; // Hide research section
       
       // Show the selected section
       if (sectionId) {
@@ -141,7 +167,7 @@
       const hash = window.location.hash.substring(1); // Get hash without '#'
       
       // Check if the hash corresponds to a valid section
-      const validSections = ['cv', 'publications', 'home']; // Add 'home' to valid sections
+      const validSections = ['cv', 'publications', 'research', 'home']; // Add 'home' and 'research' to valid sections
       if (validSections.includes(hash)) {
         showSection(hash); // Show the corresponding section based on hash
       } else {
@@ -169,10 +195,27 @@
       });
     });
 
+    // JavaScript to show Research section when clicked
+    document.getElementById('research-link').addEventListener('click', function() {
+      showSection('research'); // Show Research section
+      window.location.hash = 'research'; // Update the URL hash
+      window.scrollTo({
+        top: document.getElementById('research').offsetTop, // Scroll to Research section
+        behavior: 'smooth'
+      });
+    });
+
     // JavaScript to navigate to homepage
     document.getElementById('home-link').addEventListener('click', function() {
       showSection(); // Show home section
-      window.location.hash = ''; // Clear the URL hash
+      window.location.hash = 'home'; // Update the URL hash
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
+    });
+
+    // JavaScript to navigate to homepage from logo
+    document.getElementById('logo-link').addEventListener('click', function() {
+      showSection(); // Show home section
+      window.location.hash = 'home'; // Update the URL hash
       window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
     });
   </script>
