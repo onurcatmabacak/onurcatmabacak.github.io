@@ -86,7 +86,7 @@
       </ul>
     </nav>
     
-    <div class="content">
+    <div class="content" id="home"> <!-- Added ID for Home section -->
       <h2>Hello,<br>I'm Onur Çatmabacak</h2>
       <p>I'm a Web Developer & Designer with a passion for research and innovation.<br>
          This is a space where I share my work, projects, and publications.</p>
@@ -139,7 +139,14 @@
     // Check the current URL hash when the page loads
     window.addEventListener('load', function() {
       const hash = window.location.hash.substring(1); // Get hash without '#'
-      showSection(hash); // Show the corresponding section based on hash
+      
+      // Check if the hash corresponds to a valid section
+      const validSections = ['cv', 'publications', 'home']; // Add 'home' to valid sections
+      if (validSections.includes(hash)) {
+        showSection(hash); // Show the corresponding section based on hash
+      } else {
+        showSection(); // Default to Home if hash is not valid
+      }
     });
 
     // JavaScript to show CV section when clicked
@@ -165,7 +172,7 @@
     // JavaScript to navigate to homepage
     document.getElementById('home-link').addEventListener('click', function() {
       showSection(); // Show home section
-      window.location.hash = 'home'; // Update the URL hash
+      window.location.hash = ''; // Clear the URL hash
       window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
     });
   </script>
