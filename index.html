@@ -16,6 +16,21 @@
       .cv-container, .publications-container {
           display: none; /* Initially hidden */
       }
+      .button {
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 16px;
+          color: white;
+          background-color: #f9004d; /* Button color */
+          border: none;
+          border-radius: 5px;
+          text-decoration: none; /* Remove underline */
+          cursor: pointer;
+          margin-top: 20px; /* Space above the button */
+      }
+      .button:hover {
+          background-color: #d7003c; /* Darker shade on hover */
+      }
   </style>
 </head>
 <body>
@@ -56,29 +71,17 @@
     
     <!-- CV Embedded Section -->
     <div class="cv-container" id="cv"> <!-- ID for linking -->
-      <br>
-      <br>
       <h2>My Curriculum Vitae</h2> <!-- Optional Title for CV Section -->
-      <br>
-      <br>
-      <iframe src="OnurCatmabacak_CV.pdf" width="80%" height="1000px" style="border: none;"> <!-- Path to CV PDF -->
+      <iframe src="OnurCatmabacak_CV.pdf" width="100%" height="800px" style="border: none;"> <!-- Path to CV PDF -->
         This browser does not support PDFs. Please download the PDF to view it: <a href="OnurCatmabacak_CV.pdf">Download PDF</a>
       </iframe>
     </div>
 
     <!-- Publications Section -->
     <div class="publications-container" id="publications"> <!-- ID for linking -->
-      <h3>My Publications</h3>
-      <br>
-      <br>
-      <h2>You can view my publications directly at the following link:</h2>
-      <br>
-      <br>
-      <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22catmabacak%2C%20onur%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank">View Publications</a>
-    </div>
-
-    <div class="link">
-      <a href="#" class="hire">Hire Me</a>
+      <h2>My Publications</h2>
+      <p>You can view my publications directly at the following link:</p>
+      <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22catmabacak%2C%20onur%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank" class="button">View Publications</a>
     </div>
   </div>
 
