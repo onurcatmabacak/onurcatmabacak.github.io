@@ -76,19 +76,15 @@ a{
   color: #fff;
 }
 .social-links {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  margin-top: 20px; /* Adjust spacing between logo and social links */
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .social-links a {
-  margin: 10px 0;
+  margin-right: 15px; /* Add spacing between icons */
   text-decoration: none;
-  display: block;
 }
 
 .social-links img {
@@ -99,3 +95,4 @@ a{
 .social-links img:hover {
   transform: scale(1.2); /* Slightly enlarge the icon on hover */
 }
+
