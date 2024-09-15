@@ -75,3 +75,27 @@ a{
   border: 1px solid #fff;
   color: #fff;
 }
+.social-links {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links a {
+  margin: 10px 0;
+  text-decoration: none;
+  display: block;
+}
+
+.social-links img {
+  width: 30px; /* Adjust size if necessary */
+  transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
