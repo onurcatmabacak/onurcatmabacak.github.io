@@ -20,7 +20,8 @@
       .container {
           display: flex;
           flex-direction: column;
-          justify-content: center; /* Center items vertically */
+          align-items: center; /* Center items horizontally */
+          justify-content: flex-start; /* Align items to the top */
           min-height: 100vh; /* Minimum height to cover the viewport */
           padding: 20px; /* Add some padding */
       }
@@ -50,11 +51,6 @@
           height: 800px; /* Set height */
           border: none; /* Remove border */
           display: block; /* Block element for centering */
-      }
-      /* Centering styles for Publications section */
-      .publications-container h2,
-      .publications-container p {
-          text-align: center; /* Center text */
       }
   </style>
 </head>
