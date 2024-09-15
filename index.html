@@ -16,11 +16,6 @@
       .cv-container, .publications-container {
           display: none; /* Initially hidden */
       }
-      .publications-link {
-          margin-top: 20px; /* Spacing above the publications link */
-          font-size: 18px; /* Increase font size for visibility */
-          color: #f9004d; /* Custom color for the link */
-      }
   </style>
 </head>
 <body>
@@ -44,12 +39,12 @@
       </div>
 
       <ul>
-        <li><a href="#" id="home-link">Home</a></li> <!-- Added Home link with ID -->
-        <li><a href="#">About</a></li>
-        <li><a href="#" id="cv-link">CV</a></li> <!-- Added ID for CV link -->
-        <li><a href="#" id="publications-link">Publications</a></li> <!-- Added ID for Publications link -->
-        <li><a href="#">Research</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#home" id="home-link">Home</a></li> <!-- Added Home link with ID -->
+        <li><a href="#about">About</a></li>
+        <li><a href="#cv" id="cv-link">CV</a></li> <!-- Added ID for CV link -->
+        <li><a href="#publications" id="publications-link">Publications</a></li> <!-- Added ID for Publications link -->
+        <li><a href="#research">Research</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     
@@ -82,12 +77,30 @@
   </div>
 
   <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelector('.content').style.display = 'none';
+      document.querySelector('.cv-container').style.display = 'none';
+      document.querySelector('.publications-container').style.display = 'none';
+      
+      // Show the selected section
+      if (sectionId) {
+        document.getElementById(sectionId).style.display = 'block';
+      } else {
+        document.querySelector('.content').style.display = 'block'; // Default to Home
+      }
+    }
+
+    // Check the current URL hash when the page loads
+    window.addEventListener('load', function() {
+      const hash = window.location.hash.substring(1); // Get hash without '#'
+      showSection(hash); // Show the corresponding section based on hash
+    });
+
     // JavaScript to show CV section when clicked
     document.getElementById('cv-link').addEventListener('click', function() {
-      // Hide other content
-      document.querySelector('.content').style.display = 'none';
-      document.querySelector('.cv-container').style.display = 'block'; // Show CV section
-      document.querySelector('.publications-container').style.display = 'none'; // Hide Publications section
+      showSection('cv'); // Show CV section
+      window.location.hash = 'cv'; // Update the URL hash
       window.scrollTo({
         top: document.getElementById('cv').offsetTop, // Scroll to CV section
         behavior: 'smooth'
@@ -96,10 +109,8 @@
 
     // JavaScript to show Publications section when clicked
     document.getElementById('publications-link').addEventListener('click', function() {
-      // Hide other content
-      document.querySelector('.content').style.display = 'none';
-      document.querySelector('.cv-container').style.display = 'none'; // Hide CV section
-      document.querySelector('.publications-container').style.display = 'block'; // Show Publications section
+      showSection('publications'); // Show Publications section
+      window.location.hash = 'publications'; // Update the URL hash
       window.scrollTo({
         top: document.getElementById('publications').offsetTop, // Scroll to Publications section
         behavior: 'smooth'
@@ -108,10 +119,8 @@
 
     // JavaScript to navigate to homepage
     document.getElementById('home-link').addEventListener('click', function() {
-      // Hide CV and Publications sections if visible
-      document.querySelector('.cv-container').style.display = 'none';
-      document.querySelector('.publications-container').style.display = 'none';
-      document.querySelector('.content').style.display = 'block'; // Show content
+      showSection(); // Show home section
+      window.location.hash = 'home'; // Update the URL hash
       window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
     });
   </script>
