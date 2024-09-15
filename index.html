@@ -24,6 +24,7 @@
           justify-content: flex-start; /* Align items to the top */
           min-height: 100vh; /* Minimum height to cover the viewport */
           padding: 20px; /* Add some padding */
+          flex-grow: 1; /* Allow container to grow */
       }
       .cv-container, .publications-container {
           display: none; /* Initially hidden */
@@ -52,6 +53,18 @@
           border: none; /* Remove border */
           display: block; /* Block element for centering */
       }
+      .social-links {
+          display: flex;
+          justify-content: center; /* Center social links */
+          margin-top: 20px; /* Space above the social links */
+          position: absolute; /* Fixed position at the bottom */
+          bottom: 20px; /* Space from the bottom */
+          left: 50%; /* Center horizontally */
+          transform: translateX(-50%); /* Center adjustment */
+      }
+      .social-links a {
+          margin: 0 10px; /* Space between icons */
+      }
   </style>
 </head>
 <body>
@@ -59,19 +72,6 @@
     <nav>
       <div class="logo">
         <a href="#">Onur Çatmabacak<span></span></a> 
-      </div>
-
-      <!-- Social Links added below the logo -->
-      <div class="social-links">
-        <a href="mailto:onurcatmabacak@gmail.com" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" alt="Email">
-        </a>
-        <a href="https://github.com/onurcatmabacak" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub">
-        </a>
-        <a href="https://www.linkedin.com/in/onurcatmabacak/" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-        </a>
       </div>
 
       <ul>
@@ -103,6 +103,19 @@
       <h2>My Publications</h2>
       <p>You can view my publications directly at the following link:</p>
       <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22catmabacak%2C%20onur%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank" class="button">View Publications</a>
+    </div>
+
+    <!-- Social Links at the Bottom -->
+    <div class="social-links">
+      <a href="mailto:onurcatmabacak@gmail.com" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" alt="Email">
+      </a>
+      <a href="https://github.com/onurcatmabacak" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/onurcatmabacak/" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+      </a>
     </div>
   </div>
 
