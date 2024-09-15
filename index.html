@@ -8,6 +8,15 @@
   <title>Onur Çatmabacak - Personal Website</title>
   <!--- Custom CSS File --->
   <link rel="stylesheet" href="style.css">
+  <style>
+      /* Optional CSS for smooth scroll and appearance */
+      body {
+          scroll-behavior: smooth; /* Smooth scrolling */
+      }
+      .cv-container {
+          display: none; /* Initially hidden */
+      }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -32,7 +41,7 @@
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#cv">CV</a></li> <!-- Linked to CV section -->
+        <li><a href="#" id="cv-link">CV</a></li> <!-- Added ID for CV link -->
         <li><a href="#">Research</a></li>
         <li><a href="#">Publications</a></li>
         <li><a href="#">Contact</a></li>
@@ -57,5 +66,18 @@
       <a href="#" class="hire">Hire Me</a>
     </div>
   </div>
+
+  <script>
+    // JavaScript to show CV section when clicked
+    document.getElementById('cv-link').addEventListener('click', function() {
+      // Hide other content
+      document.querySelector('.content').style.display = 'none';
+      document.querySelector('.cv-container').style.display = 'block'; // Show CV section
+      window.scrollTo({
+        top: document.getElementById('cv').offsetTop, // Scroll to CV section
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 </html>
