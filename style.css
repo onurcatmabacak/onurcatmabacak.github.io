@@ -43,26 +43,13 @@ nav ul li a{
 nav ul li a:hover{
   color: #f9004d;
 }
-.login{
-  text-decoration: none;
-  margin-right: 15px;
-  font-size: 18px;
-}
-.btn{
-  background: #000;
-  border-radius: 6px;
-  padding: 9px 25px;
-  text-decoration: none;
-  transition: 0.5s;
-  font-size: 18px;
-}
 
 .content{
   margin-top: 10%;
   max-width: 600px;
 }
 .content h2{
-  font-size: 60px
+  font-size: 60px;
 }
 .content p{
   margin-top: 10px;
