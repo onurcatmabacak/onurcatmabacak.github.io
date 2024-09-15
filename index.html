@@ -1,46 +1,38 @@
 <!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My Simple Website</title>
-    <style>
-        /* Set the background color to black and text color to white */
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        h1 {
-            font-size: 3rem;
-        }
-        p {
-            font-size: 1.2rem;
-        }
-        a {
-            color: #00aaff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            color: #ff4500;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Simple Website Design</title>
+  <!---Custom Css File!--->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <h1>Welcome to My Website</h1>
-        <p>This is a simple web page with a black background.</p>
-        <p>Feel free to explore more by <a href="#">clicking here</a>.</p>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <a href="#">Portfo<span>lio.</span></a>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="buttons">
+        <a href="#" class="login">Log in</a>
+        <a href="#" class="btn">Register</a>
+      </div>
+    </nav>
+    <div class="content">
+      <h2>Hello,<br>It's Me CoderGirl</h2>
+      <p>I'm A Web Developer & Designer. I Will Make Your Project Beautiful And Attractive,<br>You Can Find Me On GitHub.</p>
     </div>
+    <div class="link">
+      <a href="#" class="hire">Hire Me</a>
+    </div>
+  </div>
 </body>
 </html>
-
