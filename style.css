@@ -100,22 +100,3 @@ a{
 .social-links img:hover {
   transform: scale(1.2); /* Slightly enlarge the icon on hover */
 }
-.research-item {
-  text-align: center; /* Center the images */
-  margin-bottom: 40px; /* Add space between research items */
-}
-
-.research-item img {
-  max-width: 100%; /* Ensure the image doesn't exceed the container width */
-  height: auto; /* Maintain aspect ratio */
-  width: 800px; /* Set a standard width for all images */
-  display: block;
-  margin: 0 auto; /* Center the images */
-}
-
-.research-item figcaption {
-  font-size: 14px; /* Adjust caption size */
-  color: #ccc; /* Slightly dim the caption text */
-  margin-top: 10px;
-}
-
