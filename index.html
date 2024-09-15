@@ -12,9 +12,24 @@
       /* Optional CSS for smooth scroll and appearance */
       body {
           scroll-behavior: smooth; /* Smooth scrolling */
+          background-color: black; /* Set background color to black */
+          color: white; /* Set text color to white for contrast */
+          margin: 0; /* Remove default margins */
+          padding: 0; /* Remove default padding */
+      }
+      .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Center items horizontally */
+          justify-content: center; /* Center items vertically */
+          min-height: 100vh; /* Minimum height to cover the viewport */
+          padding: 20px; /* Add some padding */
       }
       .cv-container, .publications-container {
           display: none; /* Initially hidden */
+          width: 100%; /* Full width */
+          max-width: 800px; /* Max width for the CV container */
+          margin: 20px 0; /* Margin above and below */
       }
       .button {
           display: inline-block;
@@ -30,6 +45,12 @@
       }
       .button:hover {
           background-color: #d7003c; /* Darker shade on hover */
+      }
+      iframe {
+          width: 100%; /* Full width */
+          height: 800px; /* Set height */
+          border: none; /* Remove border */
+          display: block; /* Block element for centering */
       }
   </style>
 </head>
@@ -72,7 +93,7 @@
     <!-- CV Embedded Section -->
     <div class="cv-container" id="cv"> <!-- ID for linking -->
       <h2>My Curriculum Vitae</h2> <!-- Optional Title for CV Section -->
-      <iframe src="OnurCatmabacak_CV.pdf" width="100%" height="800px" style="border: none;"> <!-- Path to CV PDF -->
+      <iframe src="OnurCatmabacak_CV.pdf" style="object-fit: cover;"> <!-- Path to CV PDF -->
         This browser does not support PDFs. Please download the PDF to view it: <a href="OnurCatmabacak_CV.pdf">Download PDF</a>
       </iframe>
     </div>
