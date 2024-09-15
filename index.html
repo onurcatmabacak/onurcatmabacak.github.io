@@ -16,10 +16,15 @@
       .cv-container {
           display: none; /* Initially hidden */
       }
+      .publications-container {
+          margin-top: 30px; /* Spacing above the publications section */
+          color: #fff; /* Text color for publications */
+      }
       .publications-link {
-          margin-top: 20px; /* Spacing above the publications link */
+          margin-top: 10px; /* Spacing above the publications link */
           font-size: 18px; /* Increase font size for visibility */
           color: #f9004d; /* Custom color for the link */
+          text-decoration: none; /* No underline */
       }
   </style>
 </head>
@@ -48,7 +53,7 @@
         <li><a href="#">About</a></li>
         <li><a href="#" id="cv-link">CV</a></li> <!-- Added ID for CV link -->
         <li><a href="#">Research</a></li>
-        <li><a href="#" id="publications-link">Publications</a></li> <!-- Added ID for Publications link -->
+        <li><a href="#">Publications</a></li> <!-- Publications link -->
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
@@ -67,9 +72,13 @@
       </iframe>
     </div>
 
-    <!-- Publications Link -->
-    <div class="publications-link">
-      <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22catmabacak%2C%20onur%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank">View My Publications</a>
+    <!-- Publications Section -->
+    <div class="publications-container" id="publications"> <!-- ID for linking -->
+      <h2>Publications</h2>
+      <p>Here are some of my published works:</p>
+      <div class="publications-link">
+        <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22catmabacak%2C%20onur%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank">View My Publications</a>
+      </div>
     </div>
 
     <div class="link">
