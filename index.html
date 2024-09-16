@@ -5,66 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Onur Çatmabacak - Personal Website</title>
+  <!--- Custom CSS File --->
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Add your CSS styles here */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    
-    .container {
-      padding: 20px;
-      position: relative;
-      min-height: 100vh; /* Make sure the container takes the full height */
-      box-sizing: border-box; /* Include padding in the height calculation */
-    }
-
-    nav {
-      background-color: #333;
-      color: white;
-      padding: 15px;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline;
-      margin-right: 15px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .content {
-      display: none; /* Hide all sections initially */
-      margin-top: 60px; /* Adjusted to account for the fixed nav */
-    }
-
-    .active {
-      display: block; /* Show the active section */
-    }
-
-    .footer-icons {
-      position: fixed;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000;
-    }
-
-    .footer-icons a {
-      margin: 0 10px;
-    }
+      /* Optional CSS for smooth scroll and appearance */
+      body {
+          scroll-behavior: smooth; /* Smooth scrolling */
+          background-color: black; /* Set background color to black */
+          color: white; /* Set text color to white for contrast */
+          margin: 0; /* Remove default margins */
+          padding: 0; /* Remove default padding */
+          position: relative; /* Relative position for social links */
+          min-height: 100vh; /* Minimum height to cover the viewport */
+      }
+      .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Center items horizontally */
+          justify-content: flex-start; /* Align items to the top */
+          flex-grow: 1; /* Allow container to grow */
+          padding: 20px; /* Add some padding */
+      }
+      .cv-container, .publications-container, .research-container {
+          display: none; /* Initially hidden */
+          width: 100%; /* Full width */
+          max-width: 800px; /* Max width for the containers */
+          margin: 20px 0; /* Margin above and below */
+      }
+      .cv-container {
+          margin-top: 40px; /* Space above CV section */
+      }
+      .button {
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 16px;
+          color: white;
+          background-color: #f9004d; /* Button color */
+          border: none;
+          border-radius: 5px;
+          text-decoration: none; /* Remove underline */
+          cursor: pointer;
+          margin-top: 20px; /* Space above the button */
+      }
+      .button:hover {
+          background-color: #d7003c; /* Darker shade on hover */
+      }
+      iframe {
+          width: 100%; /* Full width */
+          height: 600px; /* Set height to limit visibility of the icons */
+          border: none; /* Remove border */
+          display: block; /* Block element for centering */
+      }
+      .social-links {
+          display: flex;
+          justify-content: center; /* Center social links */
+          position: fixed; /* Fixed position at the bottom */
+          bottom: 20px; /* Space from the bottom */
+          left: 50%; /* Center horizontally */
+          transform: translateX(-50%); /* Center adjustment */
+          margin: 0; /* Remove margin */
+      }
+      .social-links a {
+          margin: 0 10px; /* Space between icons */
+      }
+      .research-item {
+          margin-bottom: 40px; /* Space between research items */
+      }
+      .research-item img {
+          width: 100%; /* Make image responsive */
+          height: auto; /* Maintain aspect ratio */
+      }
+      .research-item h3 {
+          margin-top: 10px; /* Space above title */
+      }
+      /* Align captions to the left */
+      figcaption {
+          text-align: left; /* Align captions to the left */
+          margin-top: 5px; /* Optional: Add some space above captions */
+      }
   </style>
 </head>
 <body>
@@ -73,6 +91,7 @@
       <div class="logo">
         <a href="#home" id="logo-link">Onur Çatmabacak<span></span></a> 
       </div>
+
       <ul>
         <li><a href="#home" id="home-link">Home</a></li> 
         <li><a href="#cv" id="cv-link">CV</a></li> 
@@ -81,107 +100,122 @@
       </ul>
     </nav>
     
-    <div class="content active" id="home"> 
+    <div class="content" id="home"> 
       <h2>Hello,<br>I'm Onur Çatmabacak</h2>
       <p>I'm a Web Developer & Designer with a passion for research and innovation.<br>
          This is a space where I share my work, projects, and publications.</p>
     </div>
-
-    <div class="content" id="cv"> 
+    
+    <div class="cv-container" id="cv"> 
       <h2>My Curriculum Vitae</h2>
-      <iframe src="OnurCatmabacak_CV.pdf" style="object-fit: cover; width: 100%; height: 600px;"> 
+      <iframe src="OnurCatmabacak_CV.pdf" style="object-fit: cover;"> 
         This browser does not support PDFs. Please download the PDF to view it: <a href="OnurCatmabacak_CV.pdf">Download PDF</a>
       </iframe>
     </div>
 
-    <div class="content" id="publications"> 
+    <div class="publications-container" id="publications"> 
       <h2>My Publications</h2>
       <p>You can view my publications directly at the following link:</p>
-      <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22catmabacak%2C%20onur%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank" class="button-link">View Publications</a>
+      <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22catmabacak%2C%20onur%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank" class="button">View Publications</a>
     </div>
 
-    <div class="content" id="research"> 
-      <h2>Research</h2>
-      <div id="instructions-container">
-        <!-- Instructions will be loaded here -->
-      </div>
-      <button id="load-instructions" class="button-link">Load Instructions</button>
-      <br><br>
+     <!-- Research Section -->
+     <div class="research-container" id="research"> 
+      <br>
       <h2><u>Accretion Disks Around Compact Objects</u></h2>
+      <br>
       <div class="research-item">
-        <img src="BHXRB_artist_int_with_labels-1.jpeg" alt="Research Image 1" style="max-width: 100%;">
+        <img src="BHXRB_artist_int_with_labels-1.jpeg" alt="Research Image 1"> 
         <figcaption>Image Credit: NASA/CXC/M.Weiss.</figcaption>
-        <p>This is a brief description of the first research topic.</p>
+        <p>This is a brief description of the first research topic. It covers the main points and findings of the study.</p>
       </div>
+      <br>
       <br>
       <h2><u>Numerical Methods</u></h2>
+      <br>
       <div class="research-item">
-        <img src="astro_diff_equation.jpg" alt="Research Image 2" style="max-width: 100%;">
+        <img src="astro_diff_equation.jpg" alt="Research Image 2"> 
         <figcaption>Image Credit: <a href="https://maths.anu.edu.au/research/groups/theoretical-astrophysics">Australian National University</a></figcaption>
-        <p>This is a brief description of the second research topic.</p>
+        <p>This is a brief description of the second research topic. It highlights the significance and implications of the research.</p>
       </div>
       <br>
+      <br>
       <h2><u>Galaxy Formation and Evolution</u></h2>
+      <br>
       <div class="research-item">
-        <img src="galaxy_simulations.png" alt="Research Image 3" style="max-width: 100%;">
+        <img src="galaxy_simulations.png" alt="Research Image 3"> 
         <figcaption>Image Credit: <a href="https://arxiv.org/pdf/1909.07976">Vogelsberger et al. 2019</a></figcaption>
-        <p>This is a brief description of the third research topic.</p>
+        <p>This is a brief description of the third research topic. It highlights the significance and implications of the research.</p>
       </div>
+      <br>
+      <br>
+      <h2><u>Introduction to Computational Astrophysics</u></h2>
+      <br>
+      <p>This is a brief description of the research topic. It highlights the significance and implications of the research.</p>
+      <p>For more detailed instructions on how to proceed, please visit the 
+         <a href="instructions.html" class="button">Instructions Page</a>.
+      </p>
     </div>
   </div>
 
-  <div class="footer-icons">
-    <a href="#home">🏠</a>
-    <a href="#cv">📄</a>
-    <a href="#publications">📚</a>
-    <a href="#research">🔬</a>
+  <div class="social-links">
+    <a href="mailto:onurcatmabacak@gmail.com" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" alt="Email">
+    </a>
+    <a href="https://github.com/onurcatmabacak" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/onurcatmabacak/" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+    </a>
   </div>
 
   <script>
-    // Function to load the content dynamically
-    function loadContent(contentId) {
-      const contents = document.querySelectorAll('.content');
-      contents.forEach(content => {
-        content.classList.remove('active'); // Hide all contents
-      });
-
-      const activeContent = document.getElementById(contentId);
-      activeContent.classList.add('active'); // Show the selected content
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelector('.content').style.display = 'none';
+      document.querySelector('.cv-container').style.display = 'none';
+      document.querySelector('.publications-container').style.display = 'none';
+      document.querySelector('.research-container').style.display = 'none';
+  
+      // Show the selected section
+      if (sectionId === 'home') {
+        document.querySelector('.content').style.display = 'block';
+      } else if (sectionId === 'cv') {
+        document.querySelector('.cv-container').style.display = 'block';
+      } else if (sectionId === 'publications') {
+        document.querySelector('.publications-container').style.display = 'block';
+      } else if (sectionId === 'research') {
+        document.querySelector('.research-container').style.display = 'block';
+      }
     }
-
+  
+    // Smooth scroll to the section if URL has a hash
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.location.hash) {
+        const sectionId = window.location.hash.substring(1); // Remove the '#' from the hash
+        showSection(sectionId);
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  
+    // Event listeners for navigation links
     document.getElementById('home-link').addEventListener('click', function() {
-      loadContent('home');
+      showSection('home');
     });
-
     document.getElementById('cv-link').addEventListener('click', function() {
-      loadContent('cv');
+      showSection('cv');
     });
-
     document.getElementById('publications-link').addEventListener('click', function() {
-      loadContent('publications');
+      showSection('publications');
     });
-
     document.getElementById('research-link').addEventListener('click', function() {
-      loadContent('research');
+      showSection('research');
     });
-
-    document.getElementById('load-instructions').addEventListener('click', function() {
-      loadInstructions();
-    });
-
-    function loadInstructions() {
-      fetch('instructions.html')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.text();
-        })
-        .then(data => {
-          document.getElementById('instructions-container').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading instructions:', error));
-    }
   </script>
+  
 </body>
 </html>
