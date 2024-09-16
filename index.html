@@ -181,11 +181,33 @@
       document.querySelector('.content').style.display = 'none';
       document.querySelector('.cv-container').style.display = 'none';
       document.querySelector('.publications-container').style.display = 'none';
-      document.querySelector('.research-container').style.display = 'none'; 
+      document.querySelector('.research-container').style.display = 'none';
+  
       // Show the selected section
-      document.getElementById(sectionId).style.display = 'block';
+      if (sectionId === 'home') {
+        document.querySelector('.content').style.display = 'block';
+      } else if (sectionId === 'cv') {
+        document.querySelector('.cv-container').style.display = 'block';
+      } else if (sectionId === 'publications') {
+        document.querySelector('.publications-container').style.display = 'block';
+      } else if (sectionId === 'research') {
+        document.querySelector('.research-container').style.display = 'block';
+      }
     }
-    
+  
+    // Smooth scroll to the section if URL has a hash
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.location.hash) {
+        const sectionId = window.location.hash.substring(1); // Remove the '#' from the hash
+        showSection(sectionId);
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  
+    // Event listeners for navigation links
     document.getElementById('home-link').addEventListener('click', function() {
       showSection('home');
     });
@@ -199,5 +221,6 @@
       showSection('research');
     });
   </script>
+  
 </body>
 </html>
