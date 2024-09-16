@@ -8,6 +8,12 @@
   <link rel="stylesheet" href="style.css">
   <style>
     /* Add your CSS styles here */
+    .content {
+      display: none; /* Hide all sections initially */
+    }
+    .active {
+      display: block; /* Show the active section */
+    }
   </style>
 </head>
 <body>
@@ -24,26 +30,26 @@
       </ul>
     </nav>
     
-    <div class="content" id="home"> 
+    <div class="content active" id="home"> 
       <h2>Hello,<br>I'm Onur Çatmabacak</h2>
       <p>I'm a Web Developer & Designer with a passion for research and innovation.<br>
          This is a space where I share my work, projects, and publications.</p>
     </div>
 
-    <div class="cv-container" id="cv"> 
+    <div class="content" id="cv"> 
       <h2>My Curriculum Vitae</h2>
       <iframe src="OnurCatmabacak_CV.pdf" style="object-fit: cover;"> 
         This browser does not support PDFs. Please download the PDF to view it: <a href="OnurCatmabacak_CV.pdf">Download PDF</a>
       </iframe>
     </div>
 
-    <div class="publications-container" id="publications"> 
+    <div class="content" id="publications"> 
       <h2>My Publications</h2>
       <p>You can view my publications directly at the following link:</p>
       <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22catmabacak%2C%20onur%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank" class="button-link">View Publications</a>
     </div>
 
-    <div class="research-container" id="research"> 
+    <div class="content" id="research"> 
       <h2>Research</h2>
       <div id="instructions-container">
         <!-- Instructions will be loaded here -->
@@ -74,6 +80,33 @@
   </div>
 
   <script>
+    // Function to load the content dynamically
+    function loadContent(contentId) {
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => {
+        content.classList.remove('active'); // Hide all contents
+      });
+
+      const activeContent = document.getElementById(contentId);
+      activeContent.classList.add('active'); // Show the selected content
+    }
+
+    document.getElementById('home-link').addEventListener('click', function() {
+      loadContent('home');
+    });
+
+    document.getElementById('cv-link').addEventListener('click', function() {
+      loadContent('cv');
+    });
+
+    document.getElementById('publications-link').addEventListener('click', function() {
+      loadContent('publications');
+    });
+
+    document.getElementById('research-link').addEventListener('click', function() {
+      loadContent('research');
+    });
+
     document.getElementById('load-instructions').addEventListener('click', function() {
       loadInstructions();
     });
