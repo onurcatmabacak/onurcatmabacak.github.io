@@ -58,8 +58,9 @@
       color: #f9004d;
       text-align: center;
     }
-    p, ul {
-      max-width: 800px;
+    .instructions-content {
+      width: 100%; /* Full width */
+      max-width: 800px; /* Same max-width as the research page */
       text-align: center;
       margin: 20px auto;
       line-height: 1.8;
@@ -88,6 +89,10 @@
     }
     .social-links a {
       margin: 0 10px;
+    }
+    .back-link {
+      margin-top: 30px;
+      font-size: 18px;
     }
   </style>
 </head>
@@ -118,7 +123,11 @@
         <li>Step 4: Compare your findings with existing data.</li>
         <li>Step 5: Prepare your report with visualizations and conclusions.</li>
       </ul>
-      <p>If you have any questions, feel free to <a href="mailto:onurcatmabacak@gmail.com">email me</a>.</p>
+
+      <!-- Back to Research Link -->
+      <div class="back-link">
+        <a href="index.html#research">&larr; Back to Research Page</a>
+      </div>
     </div>
 
     <!-- Social Links (Same as Other Pages) -->
