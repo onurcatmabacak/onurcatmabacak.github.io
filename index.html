@@ -143,21 +143,23 @@
       <h2><u>Galaxy Formation and Evolution</u></h2>
       <br>
       <div class="research-item">
-        <img src="galaxy_simulations.png" alt="Research Image 2"> 
+        <img src="galaxy_simulations.png" alt="Research Image 3"> 
         <figcaption>Image Credit: <a href="https://arxiv.org/pdf/1909.07976">Vogelsberger et al. 2019</a></figcaption>
-        <p>This is a brief description of the second research topic. It highlights the significance and implications of the research.</p>
+        <p>This is a brief description of the third research topic. It highlights the significance and implications of the research.</p>
       </div>
       <br>
       <br>
       <h2><u>Introduction to Computational Astrophysics</u></h2>
       <br>
-      <p>This is a brief description of the second research topic. It highlights the significance and implications of the research.
-        <br>
+      <p>This is a brief description of the research topic. It highlights the significance and implications of the research.</p>
+      <p>For more detailed instructions on how to proceed, please visit the 
+         <a href="instructions.html" class="button">Instructions Page</a>.
+      </p>
+      <br>
       <a href="https://github.com/EPFL-Astrophysics-I">EPFL Astrophysics I</a>
       <br>
       <a href="https://open-astrophysics-bookshelf.github.io/">Open Astrophysics Bookshelf</a>
       <br>
-      </p>
     </div>
   </div>
 
@@ -180,20 +182,10 @@
       document.querySelector('.cv-container').style.display = 'none';
       document.querySelector('.publications-container').style.display = 'none';
       document.querySelector('.research-container').style.display = 'none'; 
-      
       // Show the selected section
-      if (sectionId === 'home') {
-        document.querySelector('.content').style.display = 'block';
-      } else if (sectionId === 'cv') {
-        document.querySelector('.cv-container').style.display = 'block';
-      } else if (sectionId === 'publications') {
-        document.querySelector('.publications-container').style.display = 'block';
-      } else if (sectionId === 'research') {
-        document.querySelector('.research-container').style.display = 'block';
-      }
+      document.getElementById(sectionId).style.display = 'block';
     }
-
-    // Event listeners for navigation links
+    
     document.getElementById('home-link').addEventListener('click', function() {
       showSection('home');
     });
