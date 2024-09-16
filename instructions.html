@@ -4,19 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Instructions</title>
+  <title>Instructions - Onur Çatmabacak</title>
   <style>
+    /* Same styles as index.html for consistency */
     body {
-      background-color: #000;
+      scroll-behavior: smooth;
+      background-color: black;
       color: white;
-      font-family: 'Karla', sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      min-height: 100vh;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
       padding: 20px;
+    }
+    nav {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .logo {
+      margin-bottom: 20px;
+    }
+    .logo a {
+      text-decoration: none;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
     }
     h1 {
       color: #f9004d;
     }
     p {
       line-height: 1.6;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    ul {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+    ul li {
+      margin-bottom: 10px;
     }
     a {
       color: #f9004d;
@@ -25,16 +76,60 @@
     a:hover {
       text-decoration: underline;
     }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+    }
+    .social-links a {
+      margin: 0 10px;
+    }
   </style>
 </head>
 <body>
-  <h1>Instructions for Research Project</h1>
-  <p>Here are the detailed instructions on how to complete the research project.</p>
-  <ul>
-    <li>Step 1: Do this...</li>
-    <li>Step 2: Do that...</li>
-    <li>Step 3: Finalize your work...</li>
-  </ul>
-  <p>For more details, return to the <a href="index.html">main page</a>.</p>
+  <div class="container">
+    <!-- Navigation Menu -->
+    <nav>
+      <div class="logo">
+        <a href="index.html#home">Onur Çatmabacak<span></span></a> 
+      </div>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#cv">CV</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="instructions.html">Instructions</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Instructions Content -->
+    <h1>Instructions for Research Project</h1>
+    <p>Here are the detailed instructions for completing the research project:</p>
+    <ul>
+      <li>Step 1: Review the related literature and take notes on key findings.</li>
+      <li>Step 2: Set up the computational models as described in the research guidelines.</li>
+      <li>Step 3: Perform simulations and analyze the results.</li>
+      <li>Step 4: Compare your findings with the existing data.</li>
+      <li>Step 5: Prepare your report with visualizations and conclusions.</li>
+    </ul>
+    <p>If you have any questions, feel free to <a href="mailto:onurcatmabacak@gmail.com">email me</a>.</p>
+    
+    <!-- Bottom Social Links -->
+    <div class="social-links">
+      <a href="mailto:onurcatmabacak@gmail.com" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" alt="Email">
+      </a>
+      <a href="https://github.com/onurcatmabacak" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/onurcatmabacak/" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+  </div>
 </body>
 </html>
