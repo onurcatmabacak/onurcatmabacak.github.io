@@ -5,162 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Onur Çatmabacak - Personal Website</title>
-  <!-- Custom CSS File -->
   <link rel="stylesheet" href="style.css">
   <style>
-      /* Optional CSS for smooth scroll and appearance */
-      body {
-          scroll-behavior: smooth;
-          background-color: black;
-          color: white;
-          margin: 0;
-          padding: 0;
-          position: relative;
-          min-height: 100vh;
-      }
-      .container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          flex-grow: 1;
-          padding: 20px;
-      }
-      .content {
-          display: none; /* Initially hidden */
-          width: 100%;
-          max-width: 800px;
-          margin: 20px 0;
-      }
-      .button-link {
-          display: inline-block;
-          padding: 10px 20px;
-          font-size: 16px;
-          color: white;
-          background-color: #f9004d;
-          text-decoration: none;
-          border-radius: 5px;
-          margin-top: 20px;
-      }
-      .button-link:hover {
-          background-color: #d7003c;
-      }
-      iframe {
-          width: 100%;
-          height: 600px;
-          border: none;
-          display: block;
-      }
-      .social-links {
-          display: flex;
-          justify-content: center;
-          position: fixed;
-          bottom: 20px;
-          left: 50%;
-          transform: translateX(-50%);
-          margin: 0;
-      }
-      .social-links a {
-          margin: 0 10px;
-      }
-      .research-item {
-          margin-bottom: 40px;
-      }
-      .research-item img {
-          width: 100%;
-          height: auto;
-      }
-      .research-item h3 {
-          margin-top: 10px;
-      }
-      figcaption {
-          text-align: left;
-          margin-top: 5px;
-      }
+    /* Add your CSS styles here */
   </style>
 </head>
 <body>
   <div class="container">
     <nav>
       <div class="logo">
-        <a href="#home" id="logo-link">Onur Çatmabacak<span></span></a>
+        <a href="#home" id="logo-link">Onur Çatmabacak<span></span></a> 
       </div>
       <ul>
-        <li><a href="#home" id="home-link">Home</a></li>
-        <li><a href="#cv" id="cv-link">CV</a></li>
-        <li><a href="#publications" id="publications-link">Publications</a></li>
-        <li><a href="#research" id="research-link">Research</a></li>
+        <li><a href="#home" id="home-link">Home</a></li> 
+        <li><a href="#cv" id="cv-link">CV</a></li> 
+        <li><a href="#publications" id="publications-link">Publications</a></li> 
+        <li><a href="#research" id="research-link">Research</a></li> 
       </ul>
     </nav>
+    
+    <div class="content" id="home"> 
+      <h2>Hello,<br>I'm Onur Çatmabacak</h2>
+      <p>I'm a Web Developer & Designer with a passion for research and innovation.<br>
+         This is a space where I share my work, projects, and publications.</p>
+    </div>
 
-    <div id="content-container">
-      <!-- Content will be loaded here -->
+    <div class="cv-container" id="cv"> 
+      <h2>My Curriculum Vitae</h2>
+      <iframe src="OnurCatmabacak_CV.pdf" style="object-fit: cover;"> 
+        This browser does not support PDFs. Please download the PDF to view it: <a href="OnurCatmabacak_CV.pdf">Download PDF</a>
+      </iframe>
+    </div>
+
+    <div class="publications-container" id="publications"> 
+      <h2>My Publications</h2>
+      <p>You can view my publications directly at the following link:</p>
+      <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=%20author%3A%22catmabacak%2C%20onur%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank" class="button-link">View Publications</a>
+    </div>
+
+    <div class="research-container" id="research"> 
+      <h2>Research</h2>
+      <div id="instructions-container">
+        <!-- Instructions will be loaded here -->
+      </div>
+      <button id="load-instructions" class="button-link">Load Instructions</button>
+      <br><br>
+      <h2><u>Accretion Disks Around Compact Objects</u></h2>
+      <div class="research-item">
+        <img src="BHXRB_artist_int_with_labels-1.jpeg" alt="Research Image 1">
+        <figcaption>Image Credit: NASA/CXC/M.Weiss.</figcaption>
+        <p>This is a brief description of the first research topic.</p>
+      </div>
+      <br>
+      <h2><u>Numerical Methods</u></h2>
+      <div class="research-item">
+        <img src="astro_diff_equation.jpg" alt="Research Image 2">
+        <figcaption>Image Credit: <a href="https://maths.anu.edu.au/research/groups/theoretical-astrophysics">Australian National University</a></figcaption>
+        <p>This is a brief description of the second research topic.</p>
+      </div>
+      <br>
+      <h2><u>Galaxy Formation and Evolution</u></h2>
+      <div class="research-item">
+        <img src="galaxy_simulations.png" alt="Research Image 3">
+        <figcaption>Image Credit: <a href="https://arxiv.org/pdf/1909.07976">Vogelsberger et al. 2019</a></figcaption>
+        <p>This is a brief description of the third research topic.</p>
+      </div>
     </div>
   </div>
 
-  <div class="social-links">
-    <a href="mailto:onurcatmabacak@gmail.com" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" alt="Email">
-    </a>
-    <a href="https://github.com/onurcatmabacak" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub">
-    </a>
-    <a href="https://www.linkedin.com/in/onurcatmabacak/" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
-    </a>
-  </div>
-
   <script>
-    function loadContent(url) {
-      fetch(url)
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('content-container').innerHTML = data;
+    document.getElementById('load-instructions').addEventListener('click', function() {
+      loadInstructions();
+    });
+
+    function loadInstructions() {
+      fetch('instructions.html')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.text();
         })
-        .catch(error => console.error('Error loading content:', error));
+        .then(data => {
+          document.getElementById('instructions-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading instructions:', error));
     }
-
-    function showSection(sectionId) {
-      // Hide all sections
-      document.getElementById('content-container').innerHTML = '';
-
-      // Load the selected section
-      if (sectionId === 'home') {
-        loadContent('home.html');
-      } else if (sectionId === 'cv') {
-        loadContent('cv.html');
-      } else if (sectionId === 'publications') {
-        loadContent('publications.html');
-      } else if (sectionId === 'research') {
-        loadContent('research.html');
-      }
-    }
-
-    // Smooth scroll to the section if URL has a hash
-    document.addEventListener("DOMContentLoaded", function() {
-      if (window.location.hash) {
-        const sectionId = window.location.hash.substring(1); // Remove the '#' from the hash
-        showSection(sectionId);
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    });
-
-    // Event listeners for navigation links
-    document.getElementById('home-link').addEventListener('click', function() {
-      showSection('home');
-    });
-    document.getElementById('cv-link').addEventListener('click', function() {
-      showSection('cv');
-    });
-    document.getElementById('publications-link').addEventListener('click', function() {
-      showSection('publications');
-    });
-    document.getElementById('research-link').addEventListener('click', function() {
-      showSection('research');
-    });
   </script>
 </body>
 </html>
