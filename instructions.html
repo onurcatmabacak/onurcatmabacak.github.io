@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Instructions - Onur Çatmabacak</title>
   <style>
+    /* Same styles as index.html for consistency */
     body {
       scroll-behavior: smooth;
       background-color: black;
@@ -14,7 +15,6 @@
       padding: 0;
       position: relative;
       min-height: 100vh;
-      font-family: 'Karla', sans-serif;
     }
     .container {
       display: flex;
@@ -24,52 +24,50 @@
       padding: 20px;
     }
     nav {
-      padding: 10px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       width: 100%;
-      padding-left: 8%;
-      padding-right: 8%;
-    }
-    .logo a {
-      font-size: 40px;
-      text-decoration: none;
-      color: white;
+      padding: 20px;
+      text-align: center;
     }
     nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      font-size: 24px;
-      color: white;
-      padding: 10px;
-      transition: 0.5s;
-    }
-    nav ul li a:hover {
-      color: #f9004d;
-    }
-    h2 {
-      margin-top: 40px;
-      font-size: 40px;
-      color: #f9004d;
-      text-align: center;
-    }
-    p, ul {
-      max-width: 800px;
-      text-align: center;
-      margin: 20px auto;
-      line-height: 1.8;
-    }
-    ul {
       list-style-type: none;
       padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .logo {
+      margin-bottom: 20px;
+    }
+    .logo a {
+      text-decoration: none;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    h1 {
+      color: #f9004d;
+    }
+    p {
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    ul {
+      text-align: left;
+      margin-bottom: 40px;
     }
     ul li {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     a {
       color: #f9004d;
@@ -85,6 +83,7 @@
       bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
+      margin: 0;
     }
     .social-links a {
       margin: 0 10px;
@@ -99,29 +98,27 @@
         <a href="index.html#home">Onur Çatmabacak<span></span></a> 
       </div>
       <ul>
-        <li><a href="#home">Home</a></li> <!-- Link to Home section -->
-        <li><a href="#cv">CV</a></li> <!-- Link to CV section -->
-        <li><a href="index.html#publications">Publications</a></li> <!-- Link to Publications section -->
-        <li><a href="index.html#research">Research</a></li> <!-- Link to Research section -->
-        <li><a href="instructions.html">Instructions</a></li> <!-- Current page -->
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#cv">CV</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="instructions.html">Instructions</a></li>
       </ul>
     </nav>
     
-    <!-- Instructions Section -->
-    <div class="instructions-content" id="instructions">
-      <h2>Instructions for Research Project</h2>
-      <p>Follow these detailed instructions to complete the research project:</p>
-      <ul>
-        <li>Step 1: Review the related literature and take notes on key findings.</li>
-        <li>Step 2: Set up the computational models as described in the research guidelines.</li>
-        <li>Step 3: Perform simulations and analyze the results.</li>
-        <li>Step 4: Compare your findings with existing data.</li>
-        <li>Step 5: Prepare your report with visualizations and conclusions.</li>
-      </ul>
-      <p>If you have any questions, feel free to <a href="mailto:onurcatmabacak@gmail.com">email me</a>.</p>
-    </div>
-
-    <!-- Social Links (Same as Other Pages) -->
+    <!-- Instructions Content -->
+    <h1>Instructions for Research Project</h1>
+    <p>Here are the detailed instructions for completing the research project:</p>
+    <ul>
+      <li>Step 1: Review the related literature and take notes on key findings.</li>
+      <li>Step 2: Set up the computational models as described in the research guidelines.</li>
+      <li>Step 3: Perform simulations and analyze the results.</li>
+      <li>Step 4: Compare your findings with the existing data.</li>
+      <li>Step 5: Prepare your report with visualizations and conclusions.</li>
+    </ul>
+    <p>If you have any questions, feel free to <a href="mailto:onurcatmabacak@gmail.com">email me</a>.</p>
+    
+    <!-- Bottom Social Links -->
     <div class="social-links">
       <a href="mailto:onurcatmabacak@gmail.com" target="_blank">
         <img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" alt="Email">
