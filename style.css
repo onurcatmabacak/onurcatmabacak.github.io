@@ -30,7 +30,7 @@ nav{
   text-decoration: none;
 }
 span{
-  color: #f9004d;
+  color: #fff;
 }
 nav ul li {
   display: inline-block;
@@ -46,7 +46,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #f9004d; /* Maintain the hover effect */
+  color: #fff;
 }
 
 .content{
