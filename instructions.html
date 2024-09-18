@@ -26,7 +26,7 @@
     }
     .button {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 8px 16px;
       font-size: 16px;
       color: rgb(0, 0, 0);
       background-color: #ffffff; /* Button color */
@@ -139,15 +139,19 @@
         <li>2. Learn Essential Programming Skills
             <br>
             <u>Languages:</u> Python is widely used in computational physics and astrophysics because of its readability and powerful libraries (e.g., NumPy, SciPy, Matplotlib, Astropy). However, C/C++, and Fortran are also used for more intensive simulations.
-            Learn Python for quick prototyping and data analysis. Consider C11, C++ or Fortran for high-performance simulations.
+            Learn Python for quick prototyping and data analysis. Consider C11, C++(one of the versions: 11, 14, 17, 20) or Fortran08 for high-performance simulations.
+            While learning it is important to learn the GPU parallelization.
             <br>
             Libraries & Tools:
             NumPy/SciPy: For numerical computation.
             Matplotlib: For visualization.
             Astropy: Python library specific to astrophysics.
             h5py: For handling large datasets.
-            N-Body Simulation Libraries (e.g., gadget2, AMUSE).
-            Parallel Computing: Learn about parallelization (using MPI or OpenMP) since large-scale astrophysical simulations require significant computational resources.</li>
+            N-Body Simulation Libraries (e.g., <a href="">RAMSES</a>, <a href="http://www.tapir.caltech.edu/~phopkins/Site/GIZMO.html">Gizmo</a>,
+            <a href="https://eagle.strw.leidenuniv.nl/wordpress/index.php/people/">Eagle</a>,<a href="https://wwwmpa.mpa-garching.mpg.de/gadget4/">Gadget</a>,
+            <a href="https://docs.mesastar.org/en/">MESA</a>).
+            Parallel Computing: Learn about parallelization (using MPI or OpenMP and various new technologies) since large-scale astrophysical simulations require significant computational resources.</li>
+            <a href="https://github.com/taskflow/awesome-parallel-computing">Awesome Parallel Computing</a>
         <li>3. Study Numerical Methods for Astrophysics
             Ordinary Differential Equations (ODEs): Many astrophysical problems involve solving ODEs (e.g., orbital mechanics, stellar evolution).
             Partial Differential Equations (PDEs): Understanding numerical solutions to PDEs is crucial for modeling fluid dynamics (e.g., gas in galaxies, star formation).
