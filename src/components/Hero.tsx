@@ -53,16 +53,19 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
         >
-          <a
-            href="#research"
-            className="px-8 py-4 bg-white text-black rounded-full font-bold flex items-center group transition-transform hover:scale-105 active:scale-95"
+          <button
+            onClick={() => {
+              document.getElementById('research-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="..." // Keep your existing Tailwind classes
           >
             Explore Research
-            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-          </a>
+          </button>
           <a
-            href="#cv"
-            className="px-8 py-4 bg-transparent border border-white/10 text-white rounded-full font-bold transition-all hover:bg-white/5 hover:border-white/20 active:scale-95"
+            href="/OnurCatmabacak_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="..." // Keep your existing Tailwind classes
           >
             View CV
           </a>
