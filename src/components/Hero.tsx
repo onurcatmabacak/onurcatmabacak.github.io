@@ -55,17 +55,25 @@ export default function Hero() {
         >
           <button
             onClick={() => {
-              document.getElementById('research-section')?.scrollIntoView({ behavior: 'smooth' });
+              const researchSection = document.getElementById('research');
+              if (researchSection) {
+                researchSection.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                // Fallback: Use hash navigation
+                window.location.hash = '#research';
+              }
             }}
-            className="..." // Keep your existing Tailwind classes
+            className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
           >
             Explore Research
+            <ArrowRight size={20} className="ml-2" />
           </button>
           <a
             href="/OnurCatmabacak_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="..." // Keep your existing Tailwind classes
+            download="OnurCatmabacak_CV.pdf"
+            className="px-8 py-4 bg-[#0a0a0a] border border-white/5 hover:border-white/10 text-white font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center hover:bg-white/5"
           >
             View CV
           </a>
