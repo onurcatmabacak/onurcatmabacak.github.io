@@ -47,7 +47,7 @@ export default function Hero() {
           I'm a Computational Scientist. This is a space where I share my work, projects, and publications.
         </motion.p>
 
-        <motion.div
+      <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
@@ -63,12 +63,12 @@ export default function Hero() {
               const researchSection = document.getElementById('research');
                 console.log('Looking for research section with id="research":', researchSection);
 
-              if (researchSection) {
-                researchSection.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                // Fallback: Use hash navigation
-                window.location.hash = '#research';
-              }
+                if (researchSection) {
+                  researchSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  // Fallback: Use hash navigation
+                  window.location.hash = '#research';
+}
               }, 100);
             }}
             className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
