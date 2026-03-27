@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="absolute top-1/4 -right-20 w-96 h-96 bg-blue-900/10 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-orange-900/10 rounded-full blur-3xl -z-10" />
 
-      <div className="max-w-4xl w-full text-center">
+      <div className="max-w-4xl w-full text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,44 +47,27 @@ export default function Hero() {
           I'm a Computational Scientist. This is a space where I share my work, projects, and publications.
         </motion.p>
 
-      <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
         >
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-
-              // Small delay to ensure DOM is fully rendered
-              setTimeout(() => {
-              const researchSection = document.getElementById('research-section');
-                console.log('Looking for research section with id="research-section":', researchSection);
-
-                if (researchSection) {
-                  researchSection.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  // Fallback: Use hash navigation
-                  window.location.hash = '#research';
-}
-              }, 100);
-            }}
-            className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
+          {/* FIXED: Smooth scroll anchor link */}
+          <a
+            href="#research"
+            className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center cursor-pointer no-underline"
           >
             Explore Research
             <ArrowRight size={20} className="ml-2" />
-          </button>
+          </a>
+
+          {/* FIXED: CV Link with proper pathing */}
           <a
             href="/OnurCatmabacak_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            download="OnurCatmabacak_CV.pdf"
-            className="px-8 py-4 bg-[#0a0a0a] border border-white/5 hover:border-white/10 text-white font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center hover:bg-white/5"
-            onClick={(e) => {
-              console.log('CV button clicked');
-            }}
+            className="px-8 py-4 bg-[#0a0a0a] border border-white/5 hover:border-white/10 text-white font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center hover:bg-white/5 cursor-pointer no-underline"
           >
             View CV
           </a>
@@ -102,4 +85,3 @@ export default function Hero() {
     </section>
   );
 }
-

@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ExternalLink, BookOpen, Database, Globe, Cpu, Layers, Sparkles } from "lucide-react";
+import { ExternalLink, Globe, Cpu, Layers, Sparkles, Database } from "lucide-react";
 
 const researchTopics = [
   {
@@ -51,7 +51,8 @@ const researchTopics = [
 
 export default function Research() {
   return (
-    <section id="research" className="py-24 px-6 bg-[#050505]">
+    // FIXED: Added id="research" and scroll-mt-24 for smooth scrolling landing
+    <section id="research" className="py-24 px-6 bg-[#050505] scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
