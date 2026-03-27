@@ -60,8 +60,8 @@ export default function Hero() {
 
               // Small delay to ensure DOM is fully rendered
               setTimeout(() => {
-              const researchSection = document.getElementById('research');
-                console.log('Looking for research section with id="research":', researchSection);
+              const researchSection = document.getElementById('research-section');
+                console.log('Looking for research section with id="research-section":', researchSection);
 
                 if (researchSection) {
                   researchSection.scrollIntoView({ behavior: 'smooth' });
@@ -95,48 +95,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -transla        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
-        >
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-
-              // Small delay to ensure DOM is fully rendered
-              setTimeout(() => {
-              const researchSection = document.getElementById('research');
-                console.log('Looking for research section with id="research":', researchSection);
-
-              if (researchSection) {
-                researchSection.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                // Fallback: Use hash navigation
-                window.location.hash = '#research';
-              }
-              }, 100);
-            }}
-            className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
-          >
-            Explore Research
-            <ArrowRight size={20} className="ml-2" />
-          </button>
-          <a
-            href="/OnurCatmabacak_CV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            download="OnurCatmabacak_CV.pdf"
-            className="px-8 py-4 bg-[#0a0a0a] border border-white/5 hover:border-white/10 text-white font-bold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center hover:bg-white/5"
-            onClick={(e) => {
-              console.log('CV button clicked');
-            }}
-          >
-            View CV
-          </a>
-        </motion.div>te-x-1/2 animate-bounce text-gray-600"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-gray-600"
       >
         <ChevronDown size={32} />
       </motion.div>
