@@ -5,7 +5,7 @@ const experience = [
   {
     title: "Linux System Engineer",
     company: "Bank Julius Baer",
-    period: "Nov. 2023 - Present",
+    period: "Nov. 2023 - Sep. 2026",
     description: "Focusing on threat detection automation, data integration, and infrastructure monitoring using the Splunk ecosystem to support the bank's operational stability.",
     icon: <Briefcase size={20} className="text-blue-400" />,
   },
